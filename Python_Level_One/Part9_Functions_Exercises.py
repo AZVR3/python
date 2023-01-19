@@ -20,6 +20,7 @@
 # arrayCheck([1, 1, 2, 4, 1]) → False
 # arrayCheck([1, 1, 2, 1, 2, 3]) → True
 
+nums = [1,2,3,4]
 def arrayCheck(nums):
     nums.sort()
     nums = set(nums)
@@ -43,6 +44,7 @@ print(arrayCheck(nums))
 # stringBits('Hi') → 'H'
 # stringBits('Heeololeo') → 'Hello'
 
+mystring = "Hello"
 def stringBits(mystring):
     result = ""
     for i in range(len(mystring)):
@@ -68,11 +70,12 @@ print(stringBits(mystring))
 # end_other('AbC', 'HiaBc') → True
 # end_other('abc', 'abXabc') → True
 
-
+a = "Hiabc"
+b = "abc"
 def end_other(a, b):
     a = a.lower()
     b = b.lower()
-    return a[-(len(b):)] == b or a == b[-(len(a)):]
+    return a[-(len(b)):] == b or a == b[-(len(a)):]
 
 print(end_other(a,b))
 
@@ -116,10 +119,13 @@ print(doubleChar('hello'))
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
+a = 1
+b = 2
+c = 3
 def no_teen_sum(a, b, c):
     return fix_teen(a) + fix_teen(b) + fix_teen(c)
 def fix_teen(n):
-    if n [13,14,17,18,19]:
+    if n in range(13, 20) and n not in [15, 16]:
         return 0
     return n
 
